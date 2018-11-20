@@ -1,8 +1,5 @@
 
-import ReactDom from "react-dom";
 import React from "react";
-import { Router, Route, Link } from 'react-router'
-import "./public/css/common.css"
 
 class Dilog extends React.Component {
     constructor(props) {
@@ -14,8 +11,6 @@ class Dilog extends React.Component {
 }
 
 ReactDom.render(
-    <Router history={hashHistory}>
-        <Route path="test" component={Dilog} />
-    </Router>,
+    <Dilog></Dilog>,
     document.getElementById('app')
 );

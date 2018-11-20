@@ -1,0 +1,55 @@
+
+a{
+    text-decoration: none;
+}
+
+body{
+    padding: 0;
+    margin:0 auto;
+}
+div,ul{
+    margin:0 auto;
+}
+nav.navbar{
+    color:#888;
+    height: 50px;
+    line-height: 50px;
+    box-shadow: 0 0 1px rgba(0,0,0,0.25);
+}
+.navbar>a {
+    color: #888;
+    width: 100px;
+    text-align: center;
+    float: left;
+}
+.navbar ul{
+    overflow: hidden;
+}
+.navbar ul li{
+    padding:0 10px;
+    list-style: none;
+    float: left;
+}
+.navbar ul li a{
+    color: #888;
+}
+
+#app .left{
+    height: 100%;
+    min-width: 150px;
+    border-right: 1px solid #f1f1f1;
+    position: fixed;
+}
+#app .content {
+    overflow: hidden;
+    margin-left: 290px;
+}
+/* @media screen and (max-width: 1300px){
+    #app .content {
+      
+    }
+} */
+
+.test{
+    color: #409eff;
+}
