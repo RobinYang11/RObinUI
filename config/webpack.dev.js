@@ -30,7 +30,7 @@ var config = merge(common, {
                 notes: ['Some additionnal notes to be displayed unpon successful compilation']
             },
             onErrors: function (severity, errors) {
-
+                
             },
             clearConsole: true,
         }),

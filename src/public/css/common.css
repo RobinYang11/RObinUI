@@ -6,6 +6,7 @@ a{
 body{
     padding: 0;
     margin:0 auto;
+    font-family: "Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,SimSun,sans-serif";
 }
 div,ul{
     margin:0 auto;
@@ -40,6 +41,13 @@ nav.navbar{
     border-right: 1px solid #f1f1f1;
     position: fixed;
 }
+#app .left li{
+    list-style: none;
+}
+#app .left li a{
+    color: #272727;
+    font-size: 12px;
+}
 #app .content {
     overflow: hidden;
     margin-left: 290px;
@@ -49,7 +57,16 @@ nav.navbar{
       
     }
 } */
-
+.adv{
+    text-align: center;
+}
+.adv a{
+    color: #28ceb7;
+    font-weight: 700;
+}
+.list-active{
+    color:#28ceb7 !important;
+}
 .test{
     color: #409eff;
 }

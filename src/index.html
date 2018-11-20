@@ -8,7 +8,7 @@
 <body>
 
 	<nav class="navbar">
-		<a href="#">ROBINUI</a>
+		<a href="#">GUID</a>
 		<ul>
 			<li><a href="#">指南</a></li>
 			<li><a href="#">文档</a></li>
@@ -16,10 +16,32 @@
 	</nav>
 	<div id="app">
 		<div class="left">
-			<ul>
-				<li><a href="#">起步</a></li>
-				<li><a href="#">起步</a></li>
-				<li><a href="#">起步</a></li>
+			<div class="adv">
+				<img src="" alt="">
+				<a href="#">GUID</a>
+			</div>
+			<ul class="title-list">
+				<li class="list-item">
+					<a href="#">起步</a>
+					<ul>
+						<li><a href="#">npm</a></li>
+						<li><a href="#">yarn</a></li>
+					</ul>
+				</li>
+				<li class="list-item">
+					<a href="#">起步</a>
+					<ul>
+						<li><a href="#">npm</a></li>
+						<li><a href="#">yarn</a></li>
+					</ul>
+				</li>
+				<li class="list-item">
+					<a href="#">起步</a>
+					<ul>
+						<li><a class="list-active" href="#">npm</a></li>
+						<li><a href="#">yarn</a></li>
+					</ul>
+				</li>
 			</ul>
 		</div>
 		<!-- 内容区-->
@@ -27,7 +49,24 @@
 			content
 		</div>
 	</div>
+	<script>
+		function _bindEvent(el, type, callback) {
+			var body=document.querySelector("body");
+			bdoy.addEventListener(type, function (event) {
+				if (event.target.classList.contains(el)) {
+					callback();
+				}
+			})
+		}
 
+		function _show() {
+			console.log("show")
+		}
+
+		window.onload = function () {
+			_bindEvent('list-item', "click", _show);
+		}
+	</script>
 </body>
 
 </html>
