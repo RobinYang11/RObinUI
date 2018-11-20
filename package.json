@@ -1,0 +1,27 @@
+{
+  "name": "robinui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RobinYang11/RobinUI.git"
+  },
+  "keywords": [
+    "RobinUi"
+  ],
+  "author": "robin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RobinYang11/RobinUI/issues"
+  },
+  "homepage": "https://github.com/RobinYang11/RobinUI#readme",
+  "devDependencies": {
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "webpack": "^4.26.0"
+  }
+}
