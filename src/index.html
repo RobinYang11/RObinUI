@@ -17,27 +17,27 @@
 	<div id="app">
 		<div class="left">
 			<div class="adv">
-				<img src="" alt="">
+				<!-- <img src="" alt=""> -->
 				<a href="#">GUID</a>
 			</div>
 			<ul class="title-list">
 				<li class="list-item">
-					<a href="#">起步</a>
-					<ul>
+					<a class="list-title" href="#">起步</a>
+					<ul class="list-title-sub hide">
 						<li><a href="#">npm</a></li>
 						<li><a href="#">yarn</a></li>
 					</ul>
 				</li>
 				<li class="list-item">
-					<a href="#">起步</a>
-					<ul>
+					<a class="list-title" href="#">起步</a>
+					<ul class="list-title-sub hide">
 						<li><a href="#">npm</a></li>
 						<li><a href="#">yarn</a></li>
 					</ul>
 				</li>
 				<li class="list-item">
-					<a href="#">起步</a>
-					<ul>
+					<a class="list-title" href="#">起步</a>
+					<ul class="list-title-sub hide">
 						<li><a class="list-active" href="#">npm</a></li>
 						<li><a href="#">yarn</a></li>
 					</ul>
@@ -50,21 +50,36 @@
 		</div>
 	</div>
 	<script>
+		
 		function _bindEvent(el, type, callback) {
-			var body=document.querySelector("body");
-			bdoy.addEventListener(type, function (event) {
+			var body = document.querySelector(".left");
+			body.addEventListener(type, function (event) {
 				if (event.target.classList.contains(el)) {
-					callback();
+					callback(event);
 				}
 			})
 		}
 
-		function _show() {
-			console.log("show")
+		function _show(event) {
+			_hideOther(event.target);
+			event.target.nextElementSibling.classList.toggle("hide")
+		}
+
+		function _hideOther(dom) {
+			var list = document.querySelectorAll('.list-title-sub');
+			[].forEach.call(list, function (e) {
+				if (e !== dom && !e.classList.contains('hide')) {
+						e.classList.add('hide')
+				}
+			})
+		}
+
+		function _toggleActive() {
+
 		}
 
 		window.onload = function () {
-			_bindEvent('list-item', "click", _show);
+			_bindEvent('list-title', "click", _show);
 		}
 	</script>
 </body>

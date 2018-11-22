@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+      "module": "commonjs",
+      "target": "es5",
+      "sourceMap": false,
+      "allowJs": true
+  },
+  "include": [
+      "src/robin/*"
+  ],
+  "exclude": [
+      "node_modules"
+  ]
+}
